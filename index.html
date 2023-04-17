@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> BlockBooks</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet"> 
+		<style>
+			.logo {
+				display: block;
+				width: 250px;
+				margin-left: auto;
+  			margin-right: auto;
+			}
+			.header {
+				margin-top: 100px;
+				display: block;
+				margin-left:auto;
+				margin-right:auto;
+				width: 30%;
+			}
+			.subheading {
+				font-family: 'Comfortaa', cursive;
+				text-align: center;
+				font-size: 3.5vh
+			}
+			.preheading {
+				text-align: justify;
+				font-family: sans-serif;
+			}
+			hr {
+				border-top: 1px solid #C837AB;
+				border-bottom: none;
+			}
+			.language {
+				padding-top: 30px;
+				padding-bottom: 30px;
+				text-align: center;
+			}
+			.language img,
+			.docs img {
+				width: 35px;
+				cursor: pointer;
+			}
+			.br {
+				display: none;
+			}
+		.docs {
+	padding-top: 34px;
+	width: 100%;
+	display: inline-block;			
+}
+.ldoc {
+	width: 33.3333%;
+text-align: center;
+	float: right;
+}
+.rdoc {
+	width: 33.3333%;
+text-align: center;
+	float: left;
+}
+.mdoc {
+	width: 33.3333%;
+text-align: center;
+	float: left;
+}
+.doclink {
+	color: #000;
+	font-family: sans-serif;
+}
+		</style> 
+	</head>
+	<body>
+		<div class="header">
+			<img class="logo" src="assets/images/logo.png" />
+			<div class="language">
+				<img id="langEn" onclick="showEn()" src="assets/images/en.png" />
+				<img id="langBr" onclick="showBr()"src="assets/images/br.png" />
+			</div>
+			<hr />
+			<p class="subheading en">Innovating the culture of<br />reading through Web3</p>
+			<p class="subheading br">Inovando a cultural da<br /> leitura através da Web3</p>
+			<hr />
+			<p class="preheading en">
+			BlockBooks is a decentralized book publishing platform that utilizes Web3 technologies such as blockchain, NFTs, smart contracts, and digital wallets to create a secure and transparent ecosystem for authors, publishers, and readers.
+			</p>
+			<p class="preheading en">
+			With innovative features such as tokenized books, automated smart contracts, and an engaged community, we aim to revolutionize the publishing industry. 
+			</p>
+
+			<p class="preheading br">
+			BlockBooks é uma plataforma descentralizada de publicação de livros que utiliza tecnologias Web3, como blockchain, NFTs, contratos inteligentes e carteiras digitais para criar um ecossistema seguro e transparente para autores, editores e leitores.
+			</p>
+			<p class="preheading br">
+			Com recursos inovadores, como livros tokenizados, contratos inteligentes automatizados e uma comunidade engajada, buscamos revolucionar a indústria editorial.
+			</p>
+			<hr />
+			<div class="docs en">
+				<div class="ldoc en"><a target="_blank" href="assets/docs/whitepaper-en.pdf" class="doclink"><img  src="assets/images/whitepaper.png" /><br />Whitepaper</a></div>
+				<div class="mdoc en"><a target="_blank" href="assets/docs/letter-en.pdf" class="doclink"><img src="assets/images/letter.png" /><br />Letter</a></div>
+				<div class="rdoc en"><a target="_blank" href="assets/docs/pitchdeck-en.pdf" class="doclink"><img src="assets/images/pitchdeck.png" /><br />PitchDeck</a></div>
+			</div>
+			<div class="docs br">
+				<div class="ldoc br"><a target="_blank" href="assets/docs/whitepaper-br.pdf" class="doclink"><img  src="assets/images/whitepaper.png" /><br />Whitepaper</a></div>
+				<div class="mdoc br"><a target="_blank" href="assets/docs/letter-br.pdf" class="doclink"><img src="assets/images/letter.png" /><br />Carta</a></div>
+			</div>
+		</div>
+		<script>
+			const langEn = document.getElementById("langEn");
+			const langBr = document.getElementById("langBr");
+			const en = document.getElementsByClassName("en");
+			const br = document.getElementsByClassName("br");
+
+			function showEn() {
+				for (let i = 0; i < en.length; i++) {
+					en[i].style.display = "block";
+				}
+
+				for (let i = 0; i < br.length; i++) {
+					br[i].style.display = "none";
+				}
+			}
+			function showBr() {
+				for (let i = 0; i < en.length; i++) {
+					en[i].style.display = "none";
+				}
+
+				for (let i = 0; i < br.length; i++) {
+					br[i].style.display = "block";
+				}
+			}
+		</script>
+	</body>
+</html>
